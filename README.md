@@ -3,7 +3,6 @@ mining stock names from www.google.com/finance and getting basic stat informatio
 
 ### Things to do
 - Portfolio Stuff
-  - Add Summary MD
   - Add preview screenshot
 - This stuff
   - Test and shorten some code
