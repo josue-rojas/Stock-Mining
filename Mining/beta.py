@@ -4,7 +4,7 @@ the point of this is to find possible stock picks that are bullish and cheap
 cheap in the sense of price not valued.
 
 Important Stuff:
-- http://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas link for pandas select like from sql 
+- http://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas link for pandas select like from sql
 
 TODO OVERALL:
 - SAVE DATA TO FILES
@@ -102,7 +102,7 @@ def mineNames(seed=['AAPL','NASDAQ'],start=True):
     else:
         return 'SEED NOT RIGHT LENGTH'
     r = requests.get(url).text
-    #look for ticker:" 
+    #look for ticker:"
     relatedStocks = re.findall('(ticker:")([\w|\d|\.|-]*)(:)([\w|\d|-|\.]*)"',r)
     if not start:
         seen.append(seed[0]) #seen means visited it's page and scraped the stocks names
@@ -196,9 +196,9 @@ def getSlope(ticker,daysList=[1825,1095,365,183,92,31,7,3,1]):
         elif sumX == total and len(slopes) == 0:
             return [None, None, None]
             #return [None,None,None,None,None,None,None,None,None] #for now doesnt need that many iten
-        
+
 '''
-Returns: newEntry[name,index,price,low52,high52,
+Returns: newEntry[name,index,price,low52,high52, ]
 '''
 def newEntry(st):
     HL52 = get52HL(st[0], 0)
@@ -223,7 +223,3 @@ main() #need to fix cause removed reveresed slope so need to reverese slope on c
 #print getPrice('LMT',0)
 #mineNames(['SHA','900951'])
 #print queue
-
-
-    
-
